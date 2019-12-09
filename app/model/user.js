@@ -6,7 +6,7 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
   const UserSchema = new Schema({
-    userName: {
+    username: {
       type: String,
     },
     password: {

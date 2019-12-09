@@ -21,7 +21,21 @@ module.exports = appInfo => {
 
   config.mongoose = {
     url: 'mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb',
-    options: { },
+    options: {},
+  };
+  config.security = {
+    csrf: {
+      enable: false,
+      ignoreJSON: true,
+    },
+    domainWhiteList: [ 'http://localhost:8000' ],
+  };
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
+  exports.jwt = {
+    secret: '123456',
   };
 
 
